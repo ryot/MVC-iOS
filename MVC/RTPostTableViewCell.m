@@ -26,4 +26,9 @@
     // Configure the view for the selected state
 }
 
+- (void)updateText {
+    self.textLabel.text = self.myPost.user;
+    self.detailTextLabel.text = self.myPost.title;
+}
+
 @end

@@ -8,10 +8,12 @@
 
 #import "RTPostsTableViewController.h"
 #import "RTPost.h"
+#import "RTStartingPosts.h"
+#import "RTPostTableViewCell.h"
 
 @interface RTPostsTableViewController ()
 
-@property (nonatomic, strong) NSMutableArray *postArray;
+@property (nonatomic, strong) NSArray *posts;
 
 @end
 
@@ -29,12 +31,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.postArray = [NSMutableArray new];
-    NSMutableArray *startingPostDictArray = [NSMutableArray new];
-    for (NSDictionary *postDict in startingPostDictArray) {
-        RTPost *newPost = [[RTPost alloc] initWithDictionary:postDict];
-        [self.postArray addObject:newPost];
-    }
+    RTStartingPosts *startingPosts = [[RTStartingPosts alloc] init];
+    self.posts = [startingPosts.generatedPosts copy];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -53,17 +51,18 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return self.postArray.count;
+    return self.posts.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (RTPostTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    RTPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text = [self.postArray objectAtIndex:indexPath.row];
+    RTPost *thisPost = [self.posts objectAtIndex:indexPath.row];
+    cell.myPost = thisPost;
+    [cell updateText];
     
     return cell;
 }

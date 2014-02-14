@@ -15,7 +15,6 @@
 		FA05E69718AB218C00B9D3F8 /* RTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05E69618AB218C00B9D3F8 /* RTAppDelegate.m */; };
 		FA05E69A18AB218C00B9D3F8 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA05E69818AB218C00B9D3F8 /* Main_iPhone.storyboard */; };
 		FA05E69D18AB218C00B9D3F8 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA05E69B18AB218C00B9D3F8 /* Main_iPad.storyboard */; };
-		FA05E6A018AB218C00B9D3F8 /* RTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05E69F18AB218C00B9D3F8 /* RTViewController.m */; };
 		FA05E6A218AB218C00B9D3F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA05E6A118AB218C00B9D3F8 /* Images.xcassets */; };
 		FA05E6A918AB218C00B9D3F8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA05E6A818AB218C00B9D3F8 /* XCTest.framework */; };
 		FA05E6AA18AB218C00B9D3F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA05E68618AB218C00B9D3F8 /* Foundation.framework */; };
@@ -25,6 +24,8 @@
 		FA05E6C318AB252E00B9D3F8 /* RTPost.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05E6C218AB252E00B9D3F8 /* RTPost.m */; };
 		FA05E6C618AB292000B9D3F8 /* RTPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05E6C518AB292000B9D3F8 /* RTPostTableViewCell.m */; };
 		FA05E6C918AB296100B9D3F8 /* RTPostsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05E6C818AB296100B9D3F8 /* RTPostsTableViewController.m */; };
+		FAA4BDEB18AD8D5000DC6CC9 /* RTStartingPosts.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4BDEA18AD8D5000DC6CC9 /* RTStartingPosts.m */; };
+		FAA4BDEE18AD9B8900DC6CC9 /* RTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4BDED18AD9B8900DC6CC9 /* RTViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +51,6 @@
 		FA05E69618AB218C00B9D3F8 /* RTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTAppDelegate.m; sourceTree = "<group>"; };
 		FA05E69918AB218C00B9D3F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		FA05E69C18AB218C00B9D3F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		FA05E69E18AB218C00B9D3F8 /* RTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTViewController.h; sourceTree = "<group>"; };
-		FA05E69F18AB218C00B9D3F8 /* RTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTViewController.m; sourceTree = "<group>"; };
 		FA05E6A118AB218C00B9D3F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FA05E6A718AB218C00B9D3F8 /* MVCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA05E6A818AB218C00B9D3F8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -64,6 +63,10 @@
 		FA05E6C518AB292000B9D3F8 /* RTPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTPostTableViewCell.m; sourceTree = "<group>"; };
 		FA05E6C718AB296100B9D3F8 /* RTPostsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTPostsTableViewController.h; sourceTree = "<group>"; };
 		FA05E6C818AB296100B9D3F8 /* RTPostsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTPostsTableViewController.m; sourceTree = "<group>"; };
+		FAA4BDE918AD8D5000DC6CC9 /* RTStartingPosts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTStartingPosts.h; sourceTree = "<group>"; };
+		FAA4BDEA18AD8D5000DC6CC9 /* RTStartingPosts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTStartingPosts.m; sourceTree = "<group>"; };
+		FAA4BDEC18AD9B8900DC6CC9 /* RTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTViewController.h; sourceTree = "<group>"; };
+		FAA4BDED18AD9B8900DC6CC9 /* RTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,8 @@
 			children = (
 				FA05E6C118AB252E00B9D3F8 /* RTPost.h */,
 				FA05E6C218AB252E00B9D3F8 /* RTPost.m */,
+				FAA4BDE918AD8D5000DC6CC9 /* RTStartingPosts.h */,
+				FAA4BDEA18AD8D5000DC6CC9 /* RTStartingPosts.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -186,8 +191,8 @@
 		FA05E6C018AB246200B9D3F8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FA05E69E18AB218C00B9D3F8 /* RTViewController.h */,
-				FA05E69F18AB218C00B9D3F8 /* RTViewController.m */,
+				FAA4BDEC18AD9B8900DC6CC9 /* RTViewController.h */,
+				FAA4BDED18AD9B8900DC6CC9 /* RTViewController.m */,
 				FA05E6C718AB296100B9D3F8 /* RTPostsTableViewController.h */,
 				FA05E6C818AB296100B9D3F8 /* RTPostsTableViewController.m */,
 			);
@@ -294,10 +299,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA05E69718AB218C00B9D3F8 /* RTAppDelegate.m in Sources */,
+				FAA4BDEB18AD8D5000DC6CC9 /* RTStartingPosts.m in Sources */,
 				FA05E6C918AB296100B9D3F8 /* RTPostsTableViewController.m in Sources */,
 				FA05E6C618AB292000B9D3F8 /* RTPostTableViewCell.m in Sources */,
-				FA05E6A018AB218C00B9D3F8 /* RTViewController.m in Sources */,
 				FA05E69318AB218C00B9D3F8 /* main.m in Sources */,
+				FAA4BDEE18AD9B8900DC6CC9 /* RTViewController.m in Sources */,
 				FA05E6C318AB252E00B9D3F8 /* RTPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MVC/MVC-Prefix.pch";
 				INFOPLIST_FILE = "MVC/MVC-Info.plist";
@@ -448,6 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MVC/MVC-Prefix.pch";
 				INFOPLIST_FILE = "MVC/MVC-Info.plist";
@@ -517,6 +525,7 @@
 				FA05E6BA18AB218C00B9D3F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA05E6BB18AB218C00B9D3F8 /* Build configuration list for PBXNativeTarget "MVCTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +534,7 @@
 				FA05E6BD18AB218C00B9D3F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

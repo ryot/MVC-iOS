@@ -16,6 +16,7 @@
         self.user = [postDictionary objectForKey:@"user"];
         self.title = [postDictionary objectForKey:@"title"];
         self.content = [postDictionary objectForKey:@"content"];
+        self.date = [NSDate date];
     }
     return self;
 }
