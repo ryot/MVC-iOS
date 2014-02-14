@@ -25,7 +25,7 @@
 		FA05E6C618AB292000B9D3F8 /* RTPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05E6C518AB292000B9D3F8 /* RTPostTableViewCell.m */; };
 		FA05E6C918AB296100B9D3F8 /* RTPostsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05E6C818AB296100B9D3F8 /* RTPostsTableViewController.m */; };
 		FAA4BDEB18AD8D5000DC6CC9 /* RTStartingPosts.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4BDEA18AD8D5000DC6CC9 /* RTStartingPosts.m */; };
-		FAA4BDEE18AD9B8900DC6CC9 /* RTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4BDED18AD9B8900DC6CC9 /* RTViewController.m */; };
+		FAA4BDEE18AD9B8900DC6CC9 /* RTPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4BDED18AD9B8900DC6CC9 /* RTPostDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +65,8 @@
 		FA05E6C818AB296100B9D3F8 /* RTPostsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTPostsTableViewController.m; sourceTree = "<group>"; };
 		FAA4BDE918AD8D5000DC6CC9 /* RTStartingPosts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTStartingPosts.h; sourceTree = "<group>"; };
 		FAA4BDEA18AD8D5000DC6CC9 /* RTStartingPosts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTStartingPosts.m; sourceTree = "<group>"; };
-		FAA4BDEC18AD9B8900DC6CC9 /* RTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTViewController.h; sourceTree = "<group>"; };
-		FAA4BDED18AD9B8900DC6CC9 /* RTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTViewController.m; sourceTree = "<group>"; };
+		FAA4BDEC18AD9B8900DC6CC9 /* RTPostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTPostDetailViewController.h; sourceTree = "<group>"; };
+		FAA4BDED18AD9B8900DC6CC9 /* RTPostDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTPostDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,8 +191,8 @@
 		FA05E6C018AB246200B9D3F8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FAA4BDEC18AD9B8900DC6CC9 /* RTViewController.h */,
-				FAA4BDED18AD9B8900DC6CC9 /* RTViewController.m */,
+				FAA4BDEC18AD9B8900DC6CC9 /* RTPostDetailViewController.h */,
+				FAA4BDED18AD9B8900DC6CC9 /* RTPostDetailViewController.m */,
 				FA05E6C718AB296100B9D3F8 /* RTPostsTableViewController.h */,
 				FA05E6C818AB296100B9D3F8 /* RTPostsTableViewController.m */,
 			);
@@ -303,7 +303,7 @@
 				FA05E6C918AB296100B9D3F8 /* RTPostsTableViewController.m in Sources */,
 				FA05E6C618AB292000B9D3F8 /* RTPostTableViewCell.m in Sources */,
 				FA05E69318AB218C00B9D3F8 /* main.m in Sources */,
-				FAA4BDEE18AD9B8900DC6CC9 /* RTViewController.m in Sources */,
+				FAA4BDEE18AD9B8900DC6CC9 /* RTPostDetailViewController.m in Sources */,
 				FA05E6C318AB252E00B9D3F8 /* RTPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,8 +11,8 @@
 
 @interface RTPostTableViewCell : UITableViewCell
 
-- (void)updateText;
+- (void)updateCell:(RTPost *)thisPost;
 
-@property (nonatomic, strong) RTPost *myPost;
+@property (nonatomic, weak) RTPost *myPost;
 
 @end

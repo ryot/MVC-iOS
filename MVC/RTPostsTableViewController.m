@@ -10,6 +10,7 @@
 #import "RTPost.h"
 #import "RTStartingPosts.h"
 #import "RTPostTableViewCell.h"
+#import "RTPostDetailViewController.h"
 
 @interface RTPostsTableViewController ()
 
@@ -65,11 +66,23 @@
     RTPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     RTPost *thisPost = [self.posts objectAtIndex:indexPath.row];
-    cell.myPost = thisPost;
-    [cell updateText];
-    
+    [cell updateCell:thisPost];
     return cell;
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showDetailSegue"]) {
+        RTPostDetailViewController *detail = segue.destinationViewController;
+        NSInteger selectedRow = [self.tableView indexPathForSelectedRow].row;
+        detail.thisPost = [self.posts objectAtIndex:selectedRow];
+    }
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -109,17 +122,5 @@
     return YES;
 }
 */
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
- */
 
 @end

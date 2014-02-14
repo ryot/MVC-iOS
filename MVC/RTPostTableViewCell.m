@@ -26,9 +26,10 @@
     // Configure the view for the selected state
 }
 
-- (void)updateText {
+- (void)updateCell:(RTPost *)thisPost {
+    self.myPost = thisPost;
     self.textLabel.text = self.myPost.user;
-    self.detailTextLabel.text = self.myPost.title;
+    self.detailTextLabel.text = [self.myPost.title stringByAppendingString:self.myPost.content];
 }
 
 @end

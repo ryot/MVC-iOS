@@ -15,7 +15,7 @@
     self = [super init];
     if (self) {
         self.generatedPosts = [NSMutableArray new];
-        for (NSInteger i = 0; i < 10; i++) {
+        for (NSInteger i = 0; i < 40; i++) {
             NSArray *postKeyArray = [[NSArray alloc] initWithObjects:@"user",@"title",@"content", nil];
             NSArray *postValueArray = [[NSArray alloc] initWithObjects:[self randomName],[self randomTitle],[self randomContent], nil];
             NSDictionary *postDict = [[NSDictionary alloc] initWithObjects:postValueArray forKeys:postKeyArray];
@@ -45,13 +45,13 @@
     NSString *content;
     NSUInteger r = arc4random_uniform(10);
     if (r > 7) {
-        content = @"LOL";
+        content = @"LOL: ";
     } else if(r > 5) {
-        content = @"WTF";
+        content = @"WTF: ";
     } else if (r > 3) {
-        content = @"OMG";
+        content = @"OMG: ";
     } else {
-        content = @"FTW";
+        content = @"FTW: ";
     }
     return content;
 }
