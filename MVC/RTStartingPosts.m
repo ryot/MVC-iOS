@@ -14,6 +14,7 @@
 - (id)init {
     self = [super init];
     if (self) {
+        self.generatedPosts = [NSMutableArray new];
         for (NSInteger i = 0; i < 10; i++) {
             NSArray *postKeyArray = [[NSArray alloc] initWithObjects:@"user",@"title",@"content", nil];
             NSArray *postValueArray = [[NSArray alloc] initWithObjects:[self randomName],[self randomTitle],[self randomContent], nil];
