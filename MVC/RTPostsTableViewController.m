@@ -32,8 +32,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    RTStartingPosts *startingPosts = [[RTStartingPosts alloc] init];
-    self.posts = [startingPosts.generatedPosts copy];
+    NSString *filePath = [[self documentsDirectory] stringByAppendingPathComponent:@"saveFile"];
+    
+    /* Code Fellows Walkthrough involved copying generated plist or txt save file back into project
+     
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+        NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"saveFile" ofType:@"txt"];
+        [[NSFileManager defaultManager] copyItemAtPath:bundlePath toPath:filePath error:nil];
+    }
+    self.posts = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
+    */
+    
+    self.posts = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
+    if (!self.posts.count) {
+        RTStartingPosts *startingPosts = [[RTStartingPosts alloc] init];
+        self.posts = [startingPosts.generatedPosts copy];
+    }
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSInteger numberOfPosts = [defaults integerForKey:@"postCount"];
+    [defaults setInteger:numberOfPosts +1 forKey:@"postCount"];
+    [defaults synchronize];
+    
+    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -80,9 +100,16 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self savePosts];
     [self.tableView reloadData];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSLog(@"I have %ld posts", (long)[defaults integerForKey:@"postCount"]);
 }
 
+- (void)savePosts {
+    NSString *filePath = [[self documentsDirectory] stringByAppendingPathComponent:@"saveFile"];
+    [NSKeyedArchiver archiveRootObject:self.posts toFile:filePath];
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -122,5 +149,12 @@
     return YES;
 }
 */
+
+- (NSString *)documentsDirectory {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *results = [fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
+    NSURL *documentsURL = [results lastObject];
+    return documentsURL.path;
+}
 
 @end

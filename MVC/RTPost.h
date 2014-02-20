@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RTPost : NSObject
+@interface RTPost : NSObject <NSCoding>
 
 - (id)initWithDictionary:(NSDictionary *)postDictionary;
 

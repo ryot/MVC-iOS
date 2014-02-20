@@ -111,8 +111,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJ8-ef-BE3">
-                                <rect key="frame" x="20" y="83" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dateLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBU-jP-cTr">
+                                <rect key="frame" x="36" y="426" width="249" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -125,13 +125,13 @@
                     <connections>
                         <outlet property="authorField" destination="n9N-mY-ljS" id="A9U-LH-6MR"/>
                         <outlet property="contentField" destination="3eN-nW-V7d" id="oOs-oN-QaP"/>
-                        <outlet property="dateLabel" destination="tJ8-ef-BE3" id="HDq-Sg-Zuf"/>
+                        <outlet property="dateLabel" destination="mBU-jP-cTr" id="pKh-58-tiy"/>
                         <outlet property="titleField" destination="uxd-rB-yvM" id="8Cj-Jh-l3M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Vc-4o-hNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1096" y="-72"/>
+            <point key="canvasLocation" x="1157" y="60"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L7J-Ec-Hve">

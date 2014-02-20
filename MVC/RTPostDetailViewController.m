@@ -37,8 +37,9 @@
     
 }
 - (IBAction)submitPost:(id)sender {
-    NSDictionary *postDict = [[NSDictionary alloc] initWithObjectsAndKeys:self.authorField.text,@"user",self.titleField.text,@"title",self.contentField.text,self.contentField.text,@"content", nil];
-    RTPost *postToSubmit = [[RTPost alloc] initWithDictionary:postDict];
+    /*NSDictionary *postDict = [[NSDictionary alloc] initWithObjectsAndKeys:self.authorField.text,@"user",self.titleField.text,@"title",self.contentField.text,self.contentField.text,@"content", nil];
+    RTPost *postToSubmit = [[RTPost alloc] initWithDictionary:postDict];*/
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

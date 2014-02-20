@@ -21,4 +21,21 @@
     return self;
 }
 
+-(void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:self.user forKey:@"user"];
+    [aCoder encodeObject:self.title forKey:@"title"];
+    [aCoder encodeObject:self.content forKey:@"content"];
+    [aCoder encodeObject:self.date forKey:@"date"];
+
+}
+-(id)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super init]) {
+        self.user = [aDecoder decodeObjectForKey:@"user"];
+        self.title = [aDecoder decodeObjectForKey:@"title"];
+        self.content = [aDecoder decodeObjectForKey:@"content"];
+        self.date = [aDecoder decodeObjectForKey:@"date"];
+    }
+    return self;
+}
+
 @end
