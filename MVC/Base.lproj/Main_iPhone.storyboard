@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Posts Table View Controller-->
+        <!--Posts Table View Controller - Posts-->
         <scene sceneID="NIL-5v-fIr">
             <objects>
                 <tableViewController id="SXh-ik-xec" customClass="RTPostsTableViewController" sceneMemberID="viewController">
@@ -46,7 +46,14 @@
                             <outlet property="delegate" destination="SXh-ik-xec" id="5Qd-j5-mqX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="iCH-TH-Qqg"/>
+                    <navigationItem key="navigationItem" title="Posts" id="iCH-TH-Qqg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="XFt-bU-wYA">
+                            <connections>
+                                <action selector="newPost:" destination="SXh-ik-xec" id="Fym-Dr-6GB"/>
+                                <segue destination="U0k-9I-uEE" kind="push" identifier="newPostSegue" id="Q4n-Xw-ftJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uzX-q1-8yq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,4 +164,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Q4n-Xw-ftJ"/>
+    </inferredMetricsTieBreakers>
 </document>

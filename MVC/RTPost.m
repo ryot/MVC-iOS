@@ -10,6 +10,14 @@
 
 @implementation RTPost
 
+- (id) init {
+    self = [super init];
+    if (self) {
+        self.date = [NSDate date];
+    }
+    return self;
+}
+
 - (id)initWithDictionary:(NSDictionary *)postDictionary {
     self = [super init];
     if (self) {

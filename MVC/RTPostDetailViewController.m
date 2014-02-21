@@ -60,6 +60,7 @@
     [super viewWillDisappear:animated];
     self.thisPost.content = self.contentField.text;
     self.thisPost.user = self.authorField.text;
+    self.thisPost.title = self.titleField.text;
 }
 
 

@@ -89,12 +89,22 @@
     [cell updateCell:thisPost];
     return cell;
 }
+- (IBAction)newPost:(id)sender {
+    
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showDetailSegue"]) {
         RTPostDetailViewController *detail = segue.destinationViewController;
         NSInteger selectedRow = [self.tableView indexPathForSelectedRow].row;
         detail.thisPost = [self.posts objectAtIndex:selectedRow];
+    } else if ([segue.identifier isEqualToString:@"newPostSegue"]) {
+        RTPost *newPost = [[RTPost alloc] init];
+        RTPostDetailViewController *newPostEditor = segue.destinationViewController;
+        newPostEditor.thisPost = newPost;
+        NSMutableArray *mutablePosts = [NSMutableArray arrayWithArray:self.posts];
+        [mutablePosts insertObject:newPost atIndex:0];
+        self.posts = mutablePosts;
     }
 }
 
