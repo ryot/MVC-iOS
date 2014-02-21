@@ -30,6 +30,7 @@
     self.myPost = thisPost;
     self.textLabel.text = self.myPost.user;
     self.detailTextLabel.text = [self.myPost.title stringByAppendingString:self.myPost.content];
+    self.backgroundColor = thisPost.postColor;
 }
 
 @end

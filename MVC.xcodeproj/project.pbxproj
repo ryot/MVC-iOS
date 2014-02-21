@@ -24,6 +24,7 @@
 		FA05E6C318AB252E00B9D3F8 /* RTPost.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05E6C218AB252E00B9D3F8 /* RTPost.m */; };
 		FA05E6C618AB292000B9D3F8 /* RTPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05E6C518AB292000B9D3F8 /* RTPostTableViewCell.m */; };
 		FA05E6C918AB296100B9D3F8 /* RTPostsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05E6C818AB296100B9D3F8 /* RTPostsTableViewController.m */; };
+		FA3B4B0718B6E4C2001F7004 /* UIColor+ColorConjurer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3B4B0618B6E4C2001F7004 /* UIColor+ColorConjurer.m */; };
 		FAA4BDEB18AD8D5000DC6CC9 /* RTStartingPosts.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4BDEA18AD8D5000DC6CC9 /* RTStartingPosts.m */; };
 		FAA4BDEE18AD9B8900DC6CC9 /* RTPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4BDED18AD9B8900DC6CC9 /* RTPostDetailViewController.m */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,8 @@
 		FA05E6C518AB292000B9D3F8 /* RTPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTPostTableViewCell.m; sourceTree = "<group>"; };
 		FA05E6C718AB296100B9D3F8 /* RTPostsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTPostsTableViewController.h; sourceTree = "<group>"; };
 		FA05E6C818AB296100B9D3F8 /* RTPostsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTPostsTableViewController.m; sourceTree = "<group>"; };
+		FA3B4B0518B6E4C2001F7004 /* UIColor+ColorConjurer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorConjurer.h"; sourceTree = "<group>"; };
+		FA3B4B0618B6E4C2001F7004 /* UIColor+ColorConjurer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorConjurer.m"; sourceTree = "<group>"; };
 		FAA4BDE918AD8D5000DC6CC9 /* RTStartingPosts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTStartingPosts.h; sourceTree = "<group>"; };
 		FAA4BDEA18AD8D5000DC6CC9 /* RTStartingPosts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTStartingPosts.m; sourceTree = "<group>"; };
 		FAA4BDEC18AD9B8900DC6CC9 /* RTPostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTPostDetailViewController.h; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 				FA05E6C218AB252E00B9D3F8 /* RTPost.m */,
 				FAA4BDE918AD8D5000DC6CC9 /* RTStartingPosts.h */,
 				FAA4BDEA18AD8D5000DC6CC9 /* RTStartingPosts.m */,
+				FA3B4B0518B6E4C2001F7004 /* UIColor+ColorConjurer.h */,
+				FA3B4B0618B6E4C2001F7004 /* UIColor+ColorConjurer.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 				FA05E6C918AB296100B9D3F8 /* RTPostsTableViewController.m in Sources */,
 				FA05E6C618AB292000B9D3F8 /* RTPostTableViewCell.m in Sources */,
 				FA05E69318AB218C00B9D3F8 /* main.m in Sources */,
+				FA3B4B0718B6E4C2001F7004 /* UIColor+ColorConjurer.m in Sources */,
 				FAA4BDEE18AD9B8900DC6CC9 /* RTPostDetailViewController.m in Sources */,
 				FA05E6C318AB252E00B9D3F8 /* RTPost.m in Sources */,
 			);

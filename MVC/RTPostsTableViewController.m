@@ -120,6 +120,13 @@
     NSString *filePath = [[self documentsDirectory] stringByAppendingPathComponent:@"saveFile"];
     [NSKeyedArchiver archiveRootObject:self.posts toFile:filePath];
 }
+/*
+-(void)tableView:(UITableView *)tableView willDisplayCell:(RTPostTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier = @"Cell";
+    RTPostTableViewCell *cellToOperateOn = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    [cell setBackgroundColor:cell.myPost.postColor];
+}
+*/
 
 /*
 // Override to support conditional editing of the table view.

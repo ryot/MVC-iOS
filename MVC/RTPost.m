@@ -7,6 +7,7 @@
 //
 
 #import "RTPost.h"
+#import "UIColor+ColorConjurer.h"
 
 @implementation RTPost
 
@@ -14,6 +15,7 @@
     self = [super init];
     if (self) {
         self.date = [NSDate date];
+        self.postColor = [[UIColor new] returnRandomColor];
     }
     return self;
 }
@@ -25,6 +27,7 @@
         self.title = [postDictionary objectForKey:@"title"];
         self.content = [postDictionary objectForKey:@"content"];
         self.date = [NSDate date];
+        self.postColor = [[UIColor new] returnRandomColor];
     }
     return self;
 }
