@@ -37,6 +37,7 @@
     [aCoder encodeObject:self.title forKey:@"title"];
     [aCoder encodeObject:self.content forKey:@"content"];
     [aCoder encodeObject:self.date forKey:@"date"];
+    [aCoder encodeObject:self.postColor forKey:@"color"];
 
 }
 -(id)initWithCoder:(NSCoder *)aDecoder {
@@ -45,6 +46,7 @@
         self.title = [aDecoder decodeObjectForKey:@"title"];
         self.content = [aDecoder decodeObjectForKey:@"content"];
         self.date = [aDecoder decodeObjectForKey:@"date"];
+        self.postColor = [aDecoder decodeObjectForKey:@"color"];
     }
     return self;
 }

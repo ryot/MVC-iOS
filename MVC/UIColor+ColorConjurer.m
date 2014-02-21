@@ -12,10 +12,9 @@
 
 -(UIColor *)returnRandomColor {
     float randRed = (float)rand() / RAND_MAX;
-    NSLog(@"%f", randRed);
     float randGreen = (float)rand() / RAND_MAX;
     float randBlue = (float)rand() / RAND_MAX;
-    return [UIColor colorWithRed:randRed green:randGreen blue:randBlue alpha:0.5];
+    return [UIColor colorWithRed:randRed green:randGreen blue:randBlue alpha:0.1];
 }
 
 -(UIColor *)lightenGivenColor:(UIColor *)givenColor {
