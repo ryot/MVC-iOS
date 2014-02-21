@@ -14,11 +14,11 @@
     float randRed = (float)rand() / RAND_MAX;
     float randGreen = (float)rand() / RAND_MAX;
     float randBlue = (float)rand() / RAND_MAX;
-    return [UIColor colorWithRed:randRed green:randGreen blue:randBlue alpha:0.1];
+    return [UIColor colorWithRed:randRed green:randGreen blue:randBlue alpha:0.2];
 }
 
 -(UIColor *)lightenGivenColor:(UIColor *)givenColor {
-    return [givenColor colorWithAlphaComponent:CGColorGetAlpha(givenColor.CGColor)];
+    return [givenColor colorWithAlphaComponent:CGColorGetAlpha(givenColor.CGColor)*0.6];
 }
 
 @end

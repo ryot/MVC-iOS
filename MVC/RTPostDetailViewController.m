@@ -9,6 +9,7 @@
 #import "RTPostDetailViewController.h"
 #import "RTPostsTableViewController.h"
 #import "RTPost.h"
+#import "UIColor+ColorConjurer.h"
 
 @interface RTPostDetailViewController ()
 
@@ -34,6 +35,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    //self.view.backgroundColor = self.thisPost.postColor;
     
 }
 - (IBAction)submitPost:(id)sender {
@@ -61,6 +63,10 @@
     self.thisPost.content = self.contentField.text;
     self.thisPost.user = self.authorField.text;
     self.thisPost.title = self.titleField.text;
+}
+- (IBAction)lightenPostColor:(id)sender {
+    self.thisPost.postColor = [[UIColor new] lightenGivenColor:self.thisPost.postColor];
+    //self.view.backgroundColor = self.thisPost.postColor;
 }
 
 
