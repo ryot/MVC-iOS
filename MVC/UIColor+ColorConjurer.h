@@ -10,7 +10,7 @@
 
 @interface UIColor (ColorConjurer)
 
-- (UIColor *)returnRandomColor;
-- (UIColor *)lightenGivenColor:(UIColor *)givenColor;
++ (UIColor *)returnRandomColor;
++ (UIColor *)lightenGivenColor:(UIColor *)givenColor;
 
 @end

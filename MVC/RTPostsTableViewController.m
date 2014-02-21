@@ -44,7 +44,7 @@
     */
     
     self.posts = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
-    if (!self.posts.count) {
+    if (!self.posts) {
         RTStartingPosts *startingPosts = [[RTStartingPosts alloc] init];
         self.posts = [startingPosts.generatedPosts copy];
     }
@@ -89,9 +89,6 @@
     [cell updateCell:thisPost];
     return cell;
 }
-- (IBAction)newPost:(id)sender {
-    
-}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showDetailSegue"]) {
@@ -120,6 +117,13 @@
     NSString *filePath = [[self documentsDirectory] stringByAppendingPathComponent:@"saveFile"];
     [NSKeyedArchiver archiveRootObject:self.posts toFile:filePath];
 }
+- (IBAction)resetPosts:(id)sender {
+    RTStartingPosts *startingPosts = [[RTStartingPosts alloc] init];
+    self.posts = [startingPosts.generatedPosts copy];
+    [self.tableView reloadData];
+}
+
+
 /*
 -(void)tableView:(UITableView *)tableView willDisplayCell:(RTPostTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";

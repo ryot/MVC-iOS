@@ -47,6 +47,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Posts" id="iCH-TH-Qqg">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="refresh" id="W3R-ne-pvO">
+                            <connections>
+                                <action selector="resetPosts:" destination="SXh-ik-xec" id="Ijy-02-8jv"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="XFt-bU-wYA">
                             <connections>
                                 <action selector="newPost:" destination="SXh-ik-xec" id="Fym-Dr-6GB"/>
@@ -59,7 +64,7 @@
             </objects>
             <point key="canvasLocation" x="635" y="-67"/>
         </scene>
-        <!--Post Detail View Controller-->
+        <!--Post Detail View Controller - Editor-->
         <scene sceneID="04T-df-Ilw">
             <objects>
                 <viewController id="U0k-9I-uEE" customClass="RTPostDetailViewController" sceneMemberID="viewController">
@@ -109,21 +114,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dateLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBU-jP-cTr">
-                                <rect key="frame" x="42" y="419" width="236" height="38"/>
+                                <rect key="frame" x="42" y="401" width="236" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Go Back To Save" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5md-dk-8cc">
-                                <rect key="frame" x="84" y="343" width="153" height="21"/>
+                                <rect key="frame" x="94" y="343" width="132" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.080344852567462224" green="0.66666666666666663" blue="0.030000288412358467" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxZ-hD-JI6">
-                                <rect key="frame" x="96" y="484" width="128" height="30"/>
+                                <rect key="frame" x="77" y="475" width="166" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Lighten Post Color">
@@ -136,7 +141,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="TeK-3j-LUy"/>
+                    <navigationItem key="navigationItem" title="Editor" id="TeK-3j-LUy"/>
                     <connections>
                         <outlet property="authorField" destination="n9N-mY-ljS" id="A9U-LH-6MR"/>
                         <outlet property="contentField" destination="3eN-nW-V7d" id="oOs-oN-QaP"/>

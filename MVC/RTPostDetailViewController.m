@@ -56,6 +56,7 @@
     self.titleField.text = self.thisPost.title;
     self.contentField.text = self.thisPost.content;
     self.dateLabel.text = [self.thisPost.date description];
+    self.view.backgroundColor = self.thisPost.postColor;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -65,8 +66,8 @@
     self.thisPost.title = self.titleField.text;
 }
 - (IBAction)lightenPostColor:(id)sender {
-    self.thisPost.postColor = [[UIColor new] lightenGivenColor:self.thisPost.postColor];
-    //self.view.backgroundColor = self.thisPost.postColor;
+    self.thisPost.postColor = [UIColor lightenGivenColor:self.thisPost.postColor];
+    self.view.backgroundColor = self.thisPost.postColor;
 }
 
 
