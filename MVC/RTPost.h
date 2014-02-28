@@ -18,5 +18,6 @@
 @property (nonatomic, strong) NSDate *date;
 @property (nonatomic, strong) UIColor *postColor;
 @property (nonatomic, strong) UIImage *postPic;
+@property (nonatomic, strong) NSString *postPicPath;
 
 @end

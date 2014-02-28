@@ -85,7 +85,6 @@
     CIContext *context = [CIContext contextWithOptions:nil];
     CGImageRef cgImageRef = [context createCGImage:resultImage fromRect:resultImage.extent];
     UIImage *filteredPic = [UIImage imageWithCGImage:cgImageRef];
-    [filteredPic drawInRect:[[UIScreen mainScreen] bounds]];
     self.thisPost.postPic = filteredPic;
     self.postPicView.image = self.thisPost.postPic;
     self.postPicView.layer.cornerRadius = self.postPicView.frame.size.width/2;
@@ -153,15 +152,22 @@
         UIImage *picToCrop = [info objectForKey:UIImagePickerControllerOriginalImage];
         CGSize imageSize = [picToCrop size];
         float widthToCrop = 0.0, heightToCrop = 0.0;
+        BOOL isPortrait = false;
         if (imageSize.height > imageSize.width) {
             heightToCrop = imageSize.height - imageSize.width;
+            isPortrait = true;
         } else if (imageSize.width > imageSize.height) {
             widthToCrop = imageSize.width - imageSize.height;
         }
         CGRect squareCrop = CGRectMake(widthToCrop/2, heightToCrop/2, imageSize.width - widthToCrop, imageSize.height - heightToCrop);
-        CGImageRef imageRef = CGImageCreateWithImageInRect([picToCrop CGImage], squareCrop);
+        CGImageRef imageRef = CGImageCreateWithImageInRect(picToCrop.CGImage, squareCrop);
         UIImage *croppedPic = [UIImage imageWithCGImage:imageRef];
-        //CGImageRelease(imageRef);
+        if (isPortrait) {
+            croppedPic = [[UIImage alloc] initWithCGImage: croppedPic.CGImage
+                                                    scale: 1.0
+                                              orientation: UIImageOrientationRight];
+        }
+        CGImageRelease(imageRef);
         self.thisPost.postPic = croppedPic;
         self.postPicView.image = self.thisPost.postPic;
         self.postPicView.layer.cornerRadius = self.postPicView.frame.size.width/2;

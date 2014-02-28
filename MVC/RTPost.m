@@ -39,8 +39,8 @@
     [aCoder encodeObject:self.date forKey:@"date"];
     [aCoder encodeObject:self.postColor forKey:@"color"];
     [aCoder encodeObject:self.postPic forKey:@"pic"];
-
 }
+
 -(id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super init]) {
         self.user = [aDecoder decodeObjectForKey:@"user"];
