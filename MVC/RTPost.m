@@ -38,6 +38,7 @@
     [aCoder encodeObject:self.content forKey:@"content"];
     [aCoder encodeObject:self.date forKey:@"date"];
     [aCoder encodeObject:self.postColor forKey:@"color"];
+    [aCoder encodeObject:self.postPic forKey:@"pic"];
 
 }
 -(id)initWithCoder:(NSCoder *)aDecoder {
@@ -47,6 +48,7 @@
         self.content = [aDecoder decodeObjectForKey:@"content"];
         self.date = [aDecoder decodeObjectForKey:@"date"];
         self.postColor = [aDecoder decodeObjectForKey:@"color"];
+        self.postPic = [aDecoder decodeObjectForKey:@"pic"];
     }
     return self;
 }

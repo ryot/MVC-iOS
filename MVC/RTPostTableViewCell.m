@@ -14,7 +14,6 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
     }
     return self;
 }
@@ -31,6 +30,9 @@
     self.textLabel.text = self.myPost.user;
     self.detailTextLabel.text = [self.myPost.title stringByAppendingString:self.myPost.content];
     self.backgroundColor = self.myPost.postColor;
+    self.imageView.image = self.myPost.postPic;
+    self.imageView.layer.cornerRadius = self.imageView.frame.size.width/2;
+    self.imageView.clipsToBounds = YES;
 }
 
 @end

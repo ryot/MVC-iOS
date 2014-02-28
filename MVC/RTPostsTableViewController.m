@@ -48,13 +48,6 @@
         RTStartingPosts *startingPosts = [[RTStartingPosts alloc] init];
         self.posts = [startingPosts.generatedPosts copy];
     }
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSInteger numberOfPosts = [defaults integerForKey:@"postCount"];
-    [defaults setInteger:numberOfPosts +1 forKey:@"postCount"];
-    [defaults synchronize];
-    
-    
-
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -107,22 +100,20 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self savePosts];
     [self.tableView reloadData];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSLog(@"I have %ld posts", (long)[defaults integerForKey:@"postCount"]);
+    [self savePosts];
 }
 
 - (void)savePosts {
     NSString *filePath = [[self documentsDirectory] stringByAppendingPathComponent:@"saveFile"];
     [NSKeyedArchiver archiveRootObject:self.posts toFile:filePath];
 }
+
 - (IBAction)resetPosts:(id)sender {
     RTStartingPosts *startingPosts = [[RTStartingPosts alloc] init];
     self.posts = [startingPosts.generatedPosts copy];
     [self.tableView reloadData];
 }
-
 
 /*
 -(void)tableView:(UITableView *)tableView willDisplayCell:(RTPostTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
