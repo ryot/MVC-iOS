@@ -55,7 +55,7 @@
     self.dateLabel.text = [self.thisPost.date description];
     self.view.backgroundColor = self.thisPost.postColor;
     self.postPicView.image = self.thisPost.postPic;
-    self.postPicView.layer.cornerRadius = self.postPicView.frame.size.width/2;
+    // self.postPicView.layer.cornerRadius = self.postPicView.frame.size.width/2;
     self.postPicView.clipsToBounds = YES;
 }
 
@@ -74,7 +74,7 @@
 //filters image by clamping it within the RGB range of current post color
 - (IBAction)filterPostPic:(id)sender {
     CIImage *picToFilter = [[CIImage alloc] initWithImage:self.thisPost.postPic];
-    CGFloat red = 0.0, green = 0.0, blue = 0.0, alpha =0.0;
+    CGFloat red = 0.0, green = 0.0, blue = 0.0, alpha = 0.0;
     [self.thisPost.postColor getRed:&red green:&green blue:&blue alpha:&alpha];
     CGRect filterMinRGBA = CGRectMake(red-0.25, green-0.25, blue-0.25, alpha);
     CGRect filterMaxRGBA = CGRectMake(red+0.25, green+0.25, blue+0.25, alpha);
@@ -150,16 +150,26 @@
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [self dismissViewControllerAnimated:YES completion:^{
         UIImage *picToCrop = [info objectForKey:UIImagePickerControllerOriginalImage];
+        NSData *smallSizeImage = UIImageJPEGRepresentation(picToCrop,
+                                                           0.5);
+        picToCrop = [UIImage imageWithData:smallSizeImage];
+        
         CGSize imageSize = [picToCrop size];
         float widthToCrop = 0.0, heightToCrop = 0.0;
         BOOL isPortrait = false;
         if (imageSize.height > imageSize.width) {
             heightToCrop = imageSize.height - imageSize.width;
             isPortrait = true;
-        } else if (imageSize.width > imageSize.height) {
+        } else /*(imageSize.width > imageSize.height ) */ {
             widthToCrop = imageSize.width - imageSize.height;
         }
+        
+        NSLog(@"image width: %.2f", widthToCrop);
+        NSLog(@"image height: %.2f", heightToCrop);
+        
         CGRect squareCrop = CGRectMake(widthToCrop/2, heightToCrop/2, imageSize.width - widthToCrop, imageSize.height - heightToCrop);
+        NSLog(@"rect: %@", NSStringFromCGRect(squareCrop));
+        
         CGImageRef imageRef = CGImageCreateWithImageInRect(picToCrop.CGImage, squareCrop);
         UIImage *croppedPic = [UIImage imageWithCGImage:imageRef];
         if (isPortrait) {
@@ -170,7 +180,7 @@
         CGImageRelease(imageRef);
         self.thisPost.postPic = croppedPic;
         self.postPicView.image = self.thisPost.postPic;
-        self.postPicView.layer.cornerRadius = self.postPicView.frame.size.width/2;
+        // self.postPicView.layer.cornerRadius = self.postPicView.frame.size.width/2;
         self.postPicView.clipsToBounds = YES;
     }];
 }

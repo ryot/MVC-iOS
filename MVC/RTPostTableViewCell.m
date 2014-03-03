@@ -25,14 +25,28 @@
     // Configure the view for the selected state
 }
 
-- (void)updateCell:(RTPost *)thisPost {
-    self.myPost = thisPost;
+- (void)setMyPost:(RTPost *)myPost
+{
+    _myPost = myPost;
     self.textLabel.text = self.myPost.user;
     self.detailTextLabel.text = [self.myPost.title stringByAppendingString:self.myPost.content];
     self.backgroundColor = self.myPost.postColor;
     self.imageView.image = self.myPost.postPic;
-    self.imageView.layer.cornerRadius = self.imageView.frame.size.width/2;
-    self.imageView.clipsToBounds = YES;
 }
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.imageView.layer.masksToBounds = YES;
+    self.imageView.layer.cornerRadius = self.imageView.frame.size.width / 2.0;
+}
+
+
+
+
+
+
+
+
 
 @end

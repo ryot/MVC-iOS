@@ -79,7 +79,7 @@
     RTPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     RTPost *thisPost = [self.posts objectAtIndex:indexPath.row];
-    [cell updateCell:thisPost];
+    [cell setMyPost:thisPost];
     return cell;
 }
 
