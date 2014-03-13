@@ -25,6 +25,7 @@
 		FA05E6C618AB292000B9D3F8 /* RTPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05E6C518AB292000B9D3F8 /* RTPostTableViewCell.m */; };
 		FA05E6C918AB296100B9D3F8 /* RTPostsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05E6C818AB296100B9D3F8 /* RTPostsTableViewController.m */; };
 		FA3B4B0718B6E4C2001F7004 /* UIColor+ColorConjurer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3B4B0618B6E4C2001F7004 /* UIColor+ColorConjurer.m */; };
+		FA99FB3A18D006EF007C3716 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA99FB3918D006EF007C3716 /* Social.framework */; };
 		FAA4BDEB18AD8D5000DC6CC9 /* RTStartingPosts.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4BDEA18AD8D5000DC6CC9 /* RTStartingPosts.m */; };
 		FAA4BDEE18AD9B8900DC6CC9 /* RTPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA4BDED18AD9B8900DC6CC9 /* RTPostDetailViewController.m */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		FA05E6C818AB296100B9D3F8 /* RTPostsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTPostsTableViewController.m; sourceTree = "<group>"; };
 		FA3B4B0518B6E4C2001F7004 /* UIColor+ColorConjurer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorConjurer.h"; sourceTree = "<group>"; };
 		FA3B4B0618B6E4C2001F7004 /* UIColor+ColorConjurer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorConjurer.m"; sourceTree = "<group>"; };
+		FA99FB3918D006EF007C3716 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FAA4BDE918AD8D5000DC6CC9 /* RTStartingPosts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTStartingPosts.h; sourceTree = "<group>"; };
 		FAA4BDEA18AD8D5000DC6CC9 /* RTStartingPosts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTStartingPosts.m; sourceTree = "<group>"; };
 		FAA4BDEC18AD9B8900DC6CC9 /* RTPostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTPostDetailViewController.h; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA99FB3A18D006EF007C3716 /* Social.framework in Frameworks */,
 				FA05E68918AB218C00B9D3F8 /* CoreGraphics.framework in Frameworks */,
 				FA05E68B18AB218C00B9D3F8 /* UIKit.framework in Frameworks */,
 				FA05E68718AB218C00B9D3F8 /* Foundation.framework in Frameworks */,
@@ -118,6 +121,7 @@
 		FA05E68518AB218C00B9D3F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA99FB3918D006EF007C3716 /* Social.framework */,
 				FA05E68618AB218C00B9D3F8 /* Foundation.framework */,
 				FA05E68818AB218C00B9D3F8 /* CoreGraphics.framework */,
 				FA05E68A18AB218C00B9D3F8 /* UIKit.framework */,

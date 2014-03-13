@@ -11,6 +11,7 @@
 #import "RTPost.h"
 #import "UIColor+ColorConjurer.h"
 #import <AssetsLibrary/AssetsLibrary.h>
+#import <Social/Social.h>
 
 @interface RTPostDetailViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate>
 
@@ -110,6 +111,21 @@
     picker.sourceType = sourceType;
     picker.delegate = self;
     [self presentViewController:picker animated:YES completion:nil];
+}
+- (IBAction)sharePost:(id)sender {
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+        SLComposeViewController *composeViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [composeViewController setInitialText:self.contentField.text];
+        if (_thisPost.postPic) {
+            [composeViewController addImage:_thisPost.postPic];
+        }
+        [self presentViewController:composeViewController animated:YES completion:^{
+            NSLog(@"Showing compose view controller");
+        }];
+    } else {
+        NSLog(@"Twitter not available");
+    }
+
 }
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
